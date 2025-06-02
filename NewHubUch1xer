@@ -121,7 +121,7 @@ makeToggle("Activate Script", 170, function(state)
     if state then
         local success, response = pcall(function()
             -- put github/pastefy raw link for execution
-            return game:
+            return game:loadstring(game:HttpGet("https://raw.githubusercontent.com/ProUzef/UchixerHub/refs/heads/main/UchixerHub"))()
         end)
         if success then
             local func, loadErr = loadstring(response)
